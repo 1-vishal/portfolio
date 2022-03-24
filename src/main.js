@@ -6,6 +6,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js"
 import "glightbox/dist/js/glightbox.min.js"
 import "glightbox/src/js/glightbox.js"
 import "@srexi/purecounterjs/purecounter.js"
+// import "waypoints/lib/noframework.waypoints.js"
 import AOS from "aos";
 import "aos/dist/aos.css";
 App.AOS = new AOS.init({ disable: "phone" });
