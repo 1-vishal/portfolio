@@ -589,7 +589,6 @@
 
 <script>
 import Typed from "typed.js";
-import Isotope from "isotope-layout";
 export default {
   name: "Portfolio",
   data() {
@@ -654,27 +653,6 @@ export default {
       this.select("body").classList.toggle("mobile-nav-active");
       this.classList.toggle("bi-list");
       this.classList.toggle("bi-x");
-    },
-    portfolioClick() {
-      let portfolioContainer = this.select(".portfolio-container");
-      if (portfolioContainer) {
-        let portfolioIsotope = new Isotope(portfolioContainer, {
-          itemSelector: ".portfolio-item",
-        });
-
-        let portfolioFilters = this.select("#portfolio-flters li", true);
-        portfolioFilters.forEach(function (el) {
-          el.classList.remove("filter-active");
-        });
-        // this.classList.add("filter-active");
-
-        portfolioIsotope.arrange({
-          filter: this.getAttribute("data-filter"),
-        });
-        portfolioIsotope.on("arrangeComplete", function () {
-          this.AOS.refresh();
-        });
-      }
     },
   },
 };
