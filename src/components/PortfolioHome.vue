@@ -30,22 +30,22 @@
               ><i class="bx bx-file-blank"></i> <span>Resume</span></a
             >
           </li>
-          <li>
+          <!-- <li>
             <a
               href="#portfolio"
               class="nav-link scrollto"
               @click="navbarlinksActive()"
               ><i class="bx bx-book-content"></i> <span>Portfolio</span></a
             >
-          </li>
-          <li>
+          </li> -->
+          <!-- <li>
             <a
               href="#services"
               class="nav-link scrollto"
               @click="navbarlinksActive()"
               ><i class="bx bx-server"></i> <span>Services</span></a
             >
-          </li>
+          </li> -->
           <li>
             <a
               href="#contact"
@@ -86,18 +86,15 @@
           <div class="section-title">
             <h2>About</h2>
             <p>
-              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-              ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-              quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-              Quia fugiat sit in iste officiis commodi quidem hic quas.
+              
             </p>
           </div>
 
           <div class="row">
-            <div class="col-lg-4">
+            <!-- <div class="col-lg-4">
               <img src="/img/profile-img.jpg" class="img-fluid" alt="" />
-            </div>
-            <div class="col-lg-8 pt-4 pt-lg-0 content">
+            </div> -->
+            <div class="col-lg-12 pt-4 pt-lg-0 content">
               <h3>Web Developer.</h3>
               <p class="fst-italic">
                 Hi! I am Vishal Rajput. I am a full stack developer with mostly proficient in frontend development with having 2 year of experience.
@@ -146,13 +143,12 @@
                 </div>
               </div>
               <p>
-                Officiis eligendi itaque labore et dolorum mollitia officiis
-                optio vero. Quisquam sunt adipisci omnis et ut. Nulla
-                accusantium dolor incidunt officia tempore. Et eius omnis.
-                Cupiditate ut dicta maxime officiis quidem quia. Sed et
-                consectetur qui quia repellendus itaque neque. Aliquid amet
-                quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis
-                culpa magni laudantium dolores.
+              I am a recent Computer Application post graduate with combined expertise in web development & design. 
+              I have been committed to building my career in web development & design 
+              since I began my career working for a software development comnpany for 2 years now, along with my studies. 
+              I enjoy watching my ideas and skills transform into innovative content that drive solutions and boost business performance.
+              I am seeking a position in a leading web development agency, 
+              where I can use my skills to make a difference in my clients’ lives and further develop as a professional.
               </p>
             </div>
           </div>
@@ -166,10 +162,7 @@
           <div class="section-title">
             <h2>Facts</h2>
             <p>
-              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-              ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-              quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-              Quia fugiat sit in iste officiis commodi quidem hic quas.
+              Here are the some personal projects which I worked on to honed my skills and improve my expertise in web design and development.
             </p>
           </div>
 
@@ -243,12 +236,12 @@
           <div class="row skills-content">
             <div class="col-lg-6">
               <div class="progress">
-                <span class="skill">HTML <i class="val">95%</i></span>
+                <span class="skill">HTML <i class="val">85%</i></span>
                 <div class="progress-bar-wrap">
                   <div
                     class="progress-bar"
                     role="progressbar"
-                    aria-valuenow="100"
+                    aria-valuenow="85"
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
@@ -256,12 +249,12 @@
               </div>
 
               <div class="progress">
-                <span class="skill">CSS <i class="val">90%</i></span>
+                <span class="skill">CSS <i class="val">75%</i></span>
                 <div class="progress-bar-wrap">
                   <div
                     class="progress-bar"
                     role="progressbar"
-                    aria-valuenow="90"
+                    aria-valuenow="75"
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
@@ -274,7 +267,7 @@
                   <div
                     class="progress-bar"
                     role="progressbar"
-                    aria-valuenow="75"
+                    aria-valuenow="85"
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
@@ -286,7 +279,7 @@
                   <div
                     class="progress-bar"
                     role="progressbar"
-                    aria-valuenow="55"
+                    aria-valuenow="65"
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
@@ -296,25 +289,12 @@
 
             <div class="col-lg-6">
               <div class="progress">
-                <span class="skill">C# <i class="val">60%</i></span>
+                <span class="skill">Vue <i class="val">85%</i></span>
                 <div class="progress-bar-wrap">
                   <div
                     class="progress-bar"
                     role="progressbar"
-                    aria-valuenow="80"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">Umbraco/WordPress/CMS <i class="val">50%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="90"
+                    aria-valuenow="85"
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
@@ -327,24 +307,38 @@
                   <div
                     class="progress-bar"
                     role="progressbar"
-                    aria-valuenow="55"
+                    aria-valuenow="75"
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
                 </div>
               </div>
+                
               <div class="progress">
-                <span class="skill">Vue <i class="val">85%</i></span>
+                <span class="skill">C# <i class="val">50%</i></span>
                 <div class="progress-bar-wrap">
                   <div
                     class="progress-bar"
                     role="progressbar"
-                    aria-valuenow="55"
+                    aria-valuenow="50"
                     aria-valuemin="0"
                     aria-valuemax="100"
                   ></div>
                 </div>
-              </div>              
+              </div>
+
+              <div class="progress">
+                <span class="skill">Umbraco/WordPress/CMS <i class="val">50%</i></span>
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="50"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>                          
             </div>
           </div>
         </div>
@@ -357,10 +351,8 @@
           <div class="section-title">
             <h2>Resume</h2>
             <p>
-              Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-              ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-              quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-              Quia fugiat sit in iste officiis commodi quidem hic quas.
+              To work in an environment which encourages me to succeed and grow professionally where I can utilize my skills and knowledge
+appropriately
             </p>
           </div>
 
@@ -404,29 +396,27 @@
             <div class="col-lg-6">
               <h3 class="resume-title">Professional Experience</h3>
               <div class="resume-item">
-                <h4>Senior graphic design specialist</h4>
+                <h4>Intermediate Web Developer</h4>
                 <h5>2019 - Present</h5>
-                <p><em>Experion, New York, NY </em></p>
+                <p><em>Clickvalley, New Delhi, India </em></p>
                 <ul>
                   <li>
-                    Lead in the design, development, and implementation of the
-                    graphic, layout, and production communication materials
+                    Lead in the development, and implementation of the
+                    a website design, layout, and production of projects.
                   </li>
                   <li>
-                    Delegate tasks to the 7 members of the design team and
-                    provide counsel on all aspects of the project.
+                    When I lead a team for a project, 
+                    I ensure that I provide counsel on all aspects of the project and assign the task according to their skills.
                   </li>
                   <li>
-                    Supervise the assessment of all graphic materials in order
-                    to ensure quality and accuracy of the design
+                    The work I do has quality and accuracy.
                   </li>
                   <li>
-                    Oversee the efficient use of production project budgets
-                    ranging from $2,000 - $25,000
+                    I ensure the delivery of project/task be on time.
                   </li>
                 </ul>
               </div>
-              <div class="resume-item">
+              <!-- <div class="resume-item">
                 <h4>Graphic design specialist</h4>
                 <h5>2017 - 2018</h5>
                 <p><em>Stepping Stone Advertising, New York, NY</em></p>
@@ -448,7 +438,7 @@
                     clients and account managers
                   </li>
                 </ul>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -456,7 +446,7 @@
       <!-- End Resume Section -->
 
       <!-- ======= Portfolio Section ======= -->
-      <section id="portfolio" class="portfolio section-bg">
+      <!-- <section id="portfolio" class="portfolio section-bg">
         <div class="container" data-aos="fade-up">
           <div class="section-title">
             <h2>Portfolio</h2>
@@ -468,7 +458,7 @@
             </p>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- End Portfolio Section -->
 
       <!-- ======= Contact Section ======= -->
@@ -503,8 +493,6 @@
 
             <div class="col-lg-8 mt-5 mt-lg-0">
               <form
-                action="forms/contact.php"
-                method="post"
                 role="form"
                 class="php-email-form"
               >
