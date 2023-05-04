@@ -2,61 +2,7 @@
   <div>
     <!-- ======= Mobile nav toggle button ======= -->
     <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
-    <i class="bi bi-list mobile-nav-toggle d-xl-none" @click="mobileview()"></i>
-    <header id="header" class="d-flex flex-column justify-content-center">
-      <nav id="navbar" class="navbar nav-menu">
-        <ul>
-          <li>
-            <a
-              href="#home"
-              class="nav-link scrollto active"
-              @click="navbarlinksActive()"
-              ><i class="bx bx-home"></i> <span>Home</span></a
-            >
-          </li>
-          <li>
-            <a
-              href="#about"
-              class="nav-link scrollto"
-              @click="navbarlinksActive()"
-              ><i class="bx bx-user"></i> <span>About</span></a
-            >
-          </li>
-          <li>
-            <a
-              href="#resume"
-              class="nav-link scrollto"
-              @click="navbarlinksActive()"
-              ><i class="bx bx-file-blank"></i> <span>Resume</span></a
-            >
-          </li>
-          <!-- <li>
-            <a
-              href="#portfolio"
-              class="nav-link scrollto"
-              @click="navbarlinksActive()"
-              ><i class="bx bx-book-content"></i> <span>Portfolio</span></a
-            >
-          </li> -->
-          <!-- <li>
-            <a
-              href="#services"
-              class="nav-link scrollto"
-              @click="navbarlinksActive()"
-              ><i class="bx bx-server"></i> <span>Services</span></a
-            >
-          </li> -->
-          <li>
-            <a
-              href="#contact"
-              class="nav-link scrollto"
-              @click="navbarlinksActive()"
-              ><i class="bx bx-envelope"></i> <span>Contact</span></a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <NavMenu />
 
     <section id="home" class="d-flex flex-column justify-content-center">
       <div class="container" data-aos="zoom-in" data-aos-delay="100">
@@ -65,6 +11,7 @@
           I'm
           <span
             class="typed"
+            ref="typed"
             data-typed-items="Designer, Developer, Freelancer, Photographer"
           ></span>
         </p>
@@ -85,9 +32,7 @@
         <div class="container" data-aos="fade-up">
           <div class="section-title">
             <h2>About</h2>
-            <p>
-              
-            </p>
+            <p></p>
           </div>
 
           <div class="row">
@@ -97,7 +42,9 @@
             <div class="col-lg-12 pt-4 pt-lg-0 content">
               <h3>Web Developer.</h3>
               <p class="fst-italic">
-                Hi! I am Vishal Rajput. I am a full stack developer with mostly proficient in frontend development with having 2 year of experience.
+                Hi! I am Vishal Rajput. I am a full stack developer with mostly
+                proficient in frontend development with having 2 year of
+                experience.
               </p>
               <div class="row">
                 <div class="col-lg-6">
@@ -128,7 +75,8 @@
                     </li>
                     <li>
                       <i class="bi bi-chevron-right"></i>
-                      <strong>Degree:</strong> <span>Masters In Computer Applications</span>
+                      <strong>Degree:</strong>
+                      <span>Masters In Computer Applications</span>
                     </li>
                     <li>
                       <i class="bi bi-chevron-right"></i>
@@ -143,12 +91,16 @@
                 </div>
               </div>
               <p>
-              I am a recent Computer Application post graduate with combined expertise in web development & design. 
-              I have been committed to building my career in web development & design 
-              since I began my career working for a software development comnpany for 2 years now, along with my studies. 
-              I enjoy watching my ideas and skills transform into innovative content that drive solutions and boost business performance.
-              I am seeking a position in a leading web development agency, 
-              where I can use my skills to make a difference in my clients’ lives and further develop as a professional.
+                I am a recent Computer Application post graduate with combined
+                expertise in web development & design. I have been committed to
+                building my career in web development & design since I began my
+                career working for a software development comnpany for 2 years
+                now, along with my studies. I enjoy watching my ideas and skills
+                transform into innovative content that drive solutions and boost
+                business performance. I am seeking a position in a leading web
+                development agency, where I can use my skills to make a
+                difference in my clients’ lives and further develop as a
+                professional.
               </p>
             </div>
           </div>
@@ -162,7 +114,8 @@
           <div class="section-title">
             <h2>Facts</h2>
             <p>
-              Here are the some personal projects which I worked on to honed my skills and improve my expertise in web design and development.
+              Here are the some personal projects which I worked on to honed my
+              skills and improve my expertise in web design and development.
             </p>
           </div>
 
@@ -229,61 +182,25 @@
           <div class="section-title">
             <h2>Skills</h2>
             <p>
-             These are the skills I worked on past 2 to 3 years and still working to improve constantly.
+              These are the skills I worked on past 2 to 3 years and still
+              working to improve constantly.
             </p>
           </div>
 
-          <div class="row skills-content">
+          <div class="row skills-content" ref="skilsContent">
             <div class="col-lg-6">
-              <div class="progress">
-                <span class="skill">HTML <i class="val">85%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="85"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">CSS <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="75"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">JavaScript <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="85"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-              <div class="progress">
-                <span class="skill">Bootstrap <i class="val">65%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="65"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
+              <div class="progress" v-for="skill in skills" :key="skill.name">
+                <span class="skill"
+                  >{{ skill.name }}<i class="val">{{ skill.value }}</i></span
+                >
+                <div
+                  class="progress-bar"
+                  :style="{ width: skill.value + '%' }"
+                  role="progressbar"
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
               </div>
             </div>
 
@@ -313,7 +230,7 @@
                   ></div>
                 </div>
               </div>
-                
+
               <div class="progress">
                 <span class="skill">C# <i class="val">50%</i></span>
                 <div class="progress-bar-wrap">
@@ -328,7 +245,9 @@
               </div>
 
               <div class="progress">
-                <span class="skill">Umbraco/WordPress/CMS <i class="val">50%</i></span>
+                <span class="skill"
+                  >Umbraco/WordPress/CMS <i class="val">50%</i></span
+                >
                 <div class="progress-bar-wrap">
                   <div
                     class="progress-bar"
@@ -338,7 +257,7 @@
                     aria-valuemax="100"
                   ></div>
                 </div>
-              </div>                          
+              </div>
             </div>
           </div>
         </div>
@@ -351,8 +270,9 @@
           <div class="section-title">
             <h2>Resume</h2>
             <p>
-              To work in an environment which encourages me to succeed and grow professionally where I can utilize my skills and knowledge
-appropriately
+              To work in an environment which encourages me to succeed and grow
+              professionally where I can utilize my skills and knowledge
+              appropriately
             </p>
           </div>
 
@@ -363,9 +283,9 @@ appropriately
                 <h4>Vishal Rajput</h4>
                 <p>
                   <em
-                    >Innovative and deadline-driven Web Developer with 2+
-                    years of experience designing and developing Websites and WebApp from initial concept to
-                    final, polished deliverable.</em
+                    >Innovative and deadline-driven Web Developer with 2+ years
+                    of experience designing and developing Websites and WebApp
+                    from initial concept to final, polished deliverable.</em
                   >
                 </p>
                 <ul>
@@ -381,7 +301,8 @@ appropriately
                 <h5>2019 - 2021</h5>
                 <p><em>Dr. Bhimrao Ambedkar Unversity, Agra</em></p>
                 <p>
-                  Persued my master along side with my job to gain experience and completed my maters with 73%.
+                  Persued my master along side with my job to gain experience
+                  and completed my maters with 73%.
                 </p>
               </div>
               <div class="resume-item">
@@ -389,7 +310,9 @@ appropriately
                 <h5>2016 - 2019</h5>
                 <p><em>Dev Sanskriti Vishvavidhayalya, Haridwar</em></p>
                 <p>
-                  To pursued my goal to be a Programmer/Developer I started with Bachelor of Science with computer science and completed with 77% of marks
+                  To pursued my goal to be a Programmer/Developer I started with
+                  Bachelor of Science with computer science and completed with
+                  77% of marks
                 </p>
               </div>
             </div>
@@ -401,19 +324,16 @@ appropriately
                 <p><em>Clickvalley, New Delhi, India </em></p>
                 <ul>
                   <li>
-                    Lead in the development, and implementation of the
-                    a website design, layout, and production of projects.
+                    Lead in the development, and implementation of the a website
+                    design, layout, and production of projects.
                   </li>
                   <li>
-                    When I lead a team for a project, 
-                    I ensure that I provide counsel on all aspects of the project and assign the task according to their skills.
+                    When I lead a team for a project, I ensure that I provide
+                    counsel on all aspects of the project and assign the task
+                    according to their skills.
                   </li>
-                  <li>
-                    The work I do has quality and accuracy.
-                  </li>
-                  <li>
-                    I ensure the delivery of project/task be on time.
-                  </li>
+                  <li>The work I do has quality and accuracy.</li>
+                  <li>I ensure the delivery of project/task be on time.</li>
                 </ul>
               </div>
               <!-- <div class="resume-item">
@@ -492,10 +412,7 @@ appropriately
             </div>
 
             <div class="col-lg-8 mt-5 mt-lg-0">
-              <form
-                role="form"
-                class="php-email-form"
-              >
+              <form role="form" class="php-email-form">
                 <div class="row">
                   <div class="col-md-6 form-group">
                     <input
@@ -577,15 +494,25 @@ appropriately
 
 <script>
 import Typed from "typed.js";
+import NavMenu from "./NavMenu.vue";
 export default {
   name: "Portfolio",
+  components: {
+    NavMenu,
+  },
   data() {
     return {
+      skills: [
+        { name: "HTML", value: 90 },
+        { name: "CSS", value: 80 },
+        { name: "JavaScript", value: 70 },
+        // add more skills here
+      ],
     };
   },
 
   mounted() {
-    const typed = this.select(".typed");
+    const typed = this.$refs.typed;
     if (typed) {
       let typed_strings = typed.getAttribute("data-typed-items");
       typed_strings = typed_strings.split(",");
@@ -597,50 +524,18 @@ export default {
         backDelay: 2000,
       });
     }
-    let skilsContent = this.select(".skills-content");
-    if (skilsContent) {
-      let progress = this.select(".progress .progress-bar", true);
-      progress.forEach((el) => {
-        el.style.width = el.getAttribute("aria-valuenow") + "%";
-      });
-    }
-    window.addEventListener("scroll", this.navbarlinksActive);
-    this.portfolioClick();
-  },
-  beforeDestroy() {
-    window.removeEventListener("scroll", this.navbarlinksActive);
+    this.setProgressBarWidths();
   },
   methods: {
-    select(el, all = false) {
-      el = el.trim();
-      if (all) {
-        return [...document.querySelectorAll(el)];
-      } else {
-        return document.querySelector(el);
+    setProgressBarWidths() {
+      const skillsContent = this.$refs.skillsContent;
+      if (skillsContent) {
+        const progressBars = skillsContent.querySelectorAll(".progress-bar");
+        progressBars.forEach((progressBar) => {
+          const value = progressBar.getAttribute("aria-valuenow");
+          progressBar.style.width = value + "%";
+        });
       }
-    },
-    navbarlinksActive() {
-      let navbarlinks = this.select("#navbar .scrollto", true);
-      let position = window.scrollY + 200;
-      navbarlinks.forEach((navbarlink) => {
-        if (!navbarlink.hash) return;
-        let section = this.select(navbarlink.hash);
-        if (!section) return;
-        if (
-          position >= section.offsetTop &&
-          position <= section.offsetTop + section.offsetHeight
-        ) {
-          navbarlink.classList.remove("active");
-          navbarlink.classList.add("active");
-        } else {
-          navbarlink.classList.remove("active");
-        }
-      });
-    },
-    mobileview() {
-      this.select("body").classList.toggle("mobile-nav-active");
-      this.classList.toggle("bi-list");
-      this.classList.toggle("bi-x");
     },
   },
 };
