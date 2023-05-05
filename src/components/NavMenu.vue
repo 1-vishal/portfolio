@@ -1,44 +1,23 @@
 <template>
   <div>
     <div @click="mobileNavOpen = !mobileNavOpen">
-    <i
-      class="bi bi-list mobile-nav-toggle d-xl-none"
-      :class="mobileNavOpen ? 'bi-x' : 'bi-list'"
-      
-    ></i>
-</div>
-    <header
-      id="header"
-      :class="{ 'mobile-nav-active': mobileNavOpen }"
-      class="d-flex flex-column justify-content-center"
-    >
-      <nav id="navbar" class="navbar nav-menu">
+      <i class="bi bi-list mobile-nav-toggle d-xl-none" :class="mobileNavOpen ? 'bi-x' : 'bi-list'"></i>
+    </div>
+    <header id="header" :class="{ 'mobile-nav-active': mobileNavOpen }" class="d-flex flex-column justify-content-center">
+      <nav id="navbar" @scroll="navbarlinksActive()" class="navbar nav-menu">
         <ul>
-          <li>
-            <a
-              href="#home"
-              class="nav-link scrollto active"
-              @click="navbarlinksActive()"
-              
-              ><i class="bx bx-home"></i> <span>Home</span></a
-            >
+          <li v-for="(section, index) in sections" :key="index">
+            <a :href="'#'+section.id" class="nav-link scrollto" @click.prevent="scrollToSection(section)" :class="{ 'active': isActive(index) }"><i :class="section.iconClass"></i>
+              <span>{{ section.name }}</span></a>
+          </li>
+          <!-- <li>
+            <a href="#about" class="nav-link scrollto" @click="navbarlinksActive()"><i class="bx bx-user"></i>
+              <span>About</span></a>
           </li>
           <li>
-            <a
-              href="#about"
-              class="nav-link scrollto"
-              @click="navbarlinksActive()"
-              ><i class="bx bx-user"></i> <span>About</span></a
-            >
-          </li>
-          <li>
-            <a
-              href="#resume"
-              class="nav-link scrollto"
-              @click="navbarlinksActive()"
-              ><i class="bx bx-file-blank"></i> <span>Resume</span></a
-            >
-          </li>
+            <a href="#resume" class="nav-link scrollto" @click="navbarlinksActive()"><i class="bx bx-file-blank"></i>
+              <span>Resume</span></a>
+          </li> -->
           <!-- <li>
             <a
               href="#portfolio"
@@ -55,14 +34,10 @@
               ><i class="bx bx-server"></i> <span>Services</span></a
             >
           </li> -->
-          <li>
-            <a
-              href="#contact"
-              class="nav-link scrollto"
-              @click="navbarlinksActive()"
-              ><i class="bx bx-envelope"></i> <span>Contact</span></a
-            >
-          </li>
+          <!-- <li>
+            <a href="#contact" class="nav-link scrollto" @click="navbarlinksActive()"><i class="bx bx-envelope"></i>
+              <span>Contact</span></a>
+          </li> -->
         </ul>
       </nav>
     </header>
@@ -72,57 +47,53 @@
 export default {
   name: "NavMenu",
   data() {
-    return {
+    return { 
+      sections: [
+        { title: 'Home', id: 'home', iconClass: 'bx bx-home' },
+        { title: 'About', id: 'about', iconClass: 'bx bx-user' },
+        { title: 'Resume', id: 'resume', iconClass: 'bx bx-file-blank' },
+        { title: 'Contact', id: 'contact', iconClass: 'bx bx-envelope' }
+      ],
+      activeIndex: null,
       mobileNavOpen: false,
     };
   },
 
-  mounted() {
-  },
   methods: {
-    navbarlinksActive() {
-      const navbarlinks = this.select("#navbar .scrollto", true);
-      const sections = navbarlinks.map((navbarlink) => {
-        if (!navbarlink.hash) return null;
-        return this.select(navbarlink.hash);
-      });
-      const position = window.scrollY + 200;
-      navbarlinks.forEach((navbarlink, i) => {
-        const section = sections[i];
-        if (!section) return;
-        if (
-          position >= section.offsetTop &&
-          position <= section.offsetTop + section.offsetHeight
-        ) {
-          navbarlink.classList.add("active");
-        } else {
-          navbarlink.classList.remove("active");
+    scrollToSection(section) {
+      const target = document.querySelector(`#${section.id}`);
+      if (target) {
+        window.scrollTo({
+          top: target.offsetTop - 100,
+          behavior: 'smooth'
+        });
+      }
+    },
+    isActive(index) {
+      return this.activeIndex === index;
+    },
+    setActiveIndex(index) {
+      this.activeIndex = index;
+    },
+    handleScroll() {
+      const position = window.scrollY;
+      this.sections.forEach((section, index) => {
+        const target = document.querySelector(`#${section.id}`);
+        if (target) {
+          const isSectionActive = position >= target.offsetTop - 200 && position <= target.offsetTop + target.offsetHeight - 200;
+          if (isSectionActive) {
+            this.setActiveIndex(index);
+          }
         }
       });
-
-      //   let navbarlinks = this.select("#navbar .scrollto", true);
-      //   let position = window.scrollY + 200;
-      //   navbarlinks.forEach((navbarlink) => {
-      //     if (!navbarlink.hash) return;
-      //     let section = this.select(navbarlink.hash);
-      //     if (!section) return;
-      //     if (
-      //       position >= section.offsetTop &&
-      //       position <= section.offsetTop + section.offsetHeight
-      //     ) {
-      //       navbarlink.classList.remove("active");
-      //       navbarlink.classList.add("active");
-      //     } else {
-      //       navbarlink.classList.remove("active");
-      //     }
-      //   });
-    },
-    // mobileview() {
-    //   this.select("body").classList.toggle("mobile-nav-active");
-    //   this.classList.toggle("bi-list");
-    //   this.classList.toggle("bi-x");
-    // },
+    }
   },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
 };
 </script>
 <style scoped src="../style/css/style.css"></style>
