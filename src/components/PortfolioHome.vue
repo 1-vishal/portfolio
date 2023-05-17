@@ -177,91 +177,7 @@
       <!-- End Facts Section -->
 
       <!-- ======= Skills Section ======= -->
-      <section id="skills" class="skills section-bg">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Skills</h2>
-            <p>
-              These are the skills I worked on past 2 to 3 years and still
-              working to improve constantly.
-            </p>
-          </div>
-
-          <div class="row skills-content" ref="skilsContent">
-            <div class="col-lg-6">
-              <div class="progress" v-for="skill in skills" :key="skill.name">
-                <span class="skill"
-                  >{{ skill.name }}<i class="val">{{ skill.value }}</i></span
-                >
-                <div
-                  class="progress-bar"
-                  :style="{ width: skill.value + '%' }"
-                  role="progressbar"
-                  aria-valuenow="75"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                ></div>
-              </div>
-            </div>
-
-            <div class="col-lg-6">
-              <div class="progress">
-                <span class="skill">Vue <i class="val">85%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="85"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">React <i class="val">75%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="75"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill">C# <i class="val">50%</i></span>
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="50"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-
-              <div class="progress">
-                <span class="skill"
-                  >Umbraco/WordPress/CMS <i class="val">50%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="50"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <SkillSection/>
       <!-- End Skills Section -->
 
       <!-- ======= Resume Section ======= -->
@@ -495,10 +411,12 @@
 <script>
 import Typed from "typed.js";
 import NavMenu from "./NavMenu.vue";
+import SkillSection from "./SkillSection.vue"
 export default {
   name: "Portfolio",
   components: {
     NavMenu,
+    SkillSection,
   },
   data() {
     return {

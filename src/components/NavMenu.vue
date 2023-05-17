@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <div @click="mobileNavOpen = !mobileNavOpen">
+  <div :class="mobileNavOpen ? 'mobile' : 'desktop'">
+    <div @click="toggleNav()">
       <i class="bi bi-list mobile-nav-toggle d-xl-none" :class="mobileNavOpen ? 'bi-x' : 'bi-list'"></i>
     </div>
-    <header id="header" :class="{ 'mobile-nav-active': mobileNavOpen }" class="d-flex flex-column justify-content-center">
+    <header id="header" class="d-flex flex-column justify-content-center" :class="{ 'mobile-nav-active': mobileNavOpen,'mobile-nav-toggle': mobileNavOpen }">
       <nav id="navbar" @scroll="navbarlinksActive()" class="navbar nav-menu">
         <ul>
           <li v-for="(section, index) in sections" :key="index">
@@ -32,6 +32,9 @@ export default {
   },
 
   methods: {
+    toggleNav() {
+      this.mobileNavOpen = !this.mobileNavOpen;
+    },
     scrollToSection(section) {
       const target = document.querySelector(`#${section.id}`);
       if (target) {
